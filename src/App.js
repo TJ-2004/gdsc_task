@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Preview from "./components/Preview";
-
+import Navbar from "./components/Navbar";
 const App = () => {
   const initial = `![Image](https://cdn-images-1.medium.com/max/578/1*vZVM7utCuRiZ6-HDsNeYUA@2x.png)`;
   const [text, setText] = useState(initial);
@@ -13,7 +13,11 @@ const App = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center justify-center h-screen w-screen bg-blue-800">
+    <div className=" flex flex-col relative items-center justify-center h-screen w-screen bg-blue-800 ">
+      <div className="bg-white fixed top-0 w-full h-[5%] rounded-lg">
+        <Navbar />
+      </div>
+
       <div className="flex md:flex-row flex-col h-[80%] md:h-2/5 w-[90%] gap-5 justify-center items-center ">
         <div className=" w-full h-full rounded-xl overflow-hidden   md:m-9 ">
           <textarea
@@ -40,7 +44,7 @@ const App = () => {
         </button>
         <button
           type="button"
-        //   onClick={handleCopy}
+          //   onClick={handleCopy}
           className="text-white rounded-lg cursor-pointer bg-red-600 px-4 py-2"
         >
           Copy
