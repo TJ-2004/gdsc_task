@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Preview from "./components/Preview";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 const App = () => {
   const initial = `![Image](https://cdn-images-1.medium.com/max/578/1*vZVM7utCuRiZ6-HDsNeYUA@2x.png)`;
   const [text, setText] = useState(initial);
@@ -50,6 +51,12 @@ const App = () => {
           Copy
         </button>
       </div>
+
+      <div >
+        <Footer />
+      </div>
+
+
     </div>
   );
 };

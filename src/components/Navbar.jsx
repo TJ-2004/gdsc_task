@@ -1,26 +1,52 @@
-import React from "react";
-
+import React from 'react';
+// import GdscsLogo from "../assets/logo.png"
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center h-full">
-      <div className=" bg-red-500 rounded ">
-        <a href="https://gdscsrm.com/" className="text-xl p-4 " target="_blank">
-          GDSC
+    <div className="flex justify-between items-center h-full  ">
+      <div>
+        <a
+          href="https://gdscsrm.com/"
+          className="text-xl p-4 ml-4 "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        GDSC
+          
         </a>
       </div>
-      <div className="flex justify-between gap-5 ">
-        <div className=" bg-green-500 rounded">
-          <a href="https://twitter.com/tanishqjais9756" className="text-xl p-4" target="_blank">
+      <div className="flex justify-between gap-5 mr-4 ">
+        <div>
+          <a
+            href="https://twitter.com/tanishqjais9756"
+            className="text-xl p-4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             My Twitter
           </a>
         </div>
-        <div className=" bg-yellow-500 rounded ">
-          <a href="https://github.com/TJ-2004" className="text-xl p-4 " target="_blank">
+        <div>
+          <a
+            href="https://github.com/TJ-2004"
+            className="text-xl p-4 "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             My Github
           </a>
         </div>
+        <div>
+          <a
+            href="https://github.com/TJ-2004/gdsc_task"
+            className="text-xl p-4 "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repo
+          </a>
+        </div>
       </div>
-    </div> 
+    </div>
   );
 };
 
