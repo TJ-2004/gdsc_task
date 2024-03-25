@@ -1,16 +1,25 @@
-import React, { useState } from "react";
-import Preview from "./components/Preview";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import React, { useState } from 'react';
+import Preview from './components/Preview';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 const App = () => {
   const initial = `![Image](https://cdn-images-1.medium.com/max/578/1*vZVM7utCuRiZ6-HDsNeYUA@2x.png)`;
   const [text, setText] = useState(initial);
+  const [copytext, setCopytext] = useState('Copy');
 
   const handleChange = (e) => {
     setText(e.target.value);
   };
   const handleClick = (e) => {
-    setText(" ");
+    setText(' ');
+  };
+  const handleCopy = () => {
+    console.log(text);
+    navigator.clipboard.writeText(text);
+    setCopytext('Copied');
+    setTimeout(() => {
+      setCopytext('Copy');
+    }, 1000);
   };
 
   return (
@@ -45,18 +54,16 @@ const App = () => {
         </button>
         <button
           type="button"
-          //   onClick={handleCopy}
+          onClick={handleCopy}
           className="text-white rounded-lg cursor-pointer bg-red-600 px-4 py-2"
         >
-          Copy
+          {copytext}
         </button>
       </div>
 
-      <div >
+      <div>
         <Footer />
       </div>
-
-
     </div>
   );
 };
