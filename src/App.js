@@ -28,49 +28,59 @@ const App = () => {
       selectionStart !== 0
         ? tag + text.substring(0, selectionStart) + tag
         : 'Enter text first...';
-    // console.log(selectionStart);
 
     setText(newText);
   };
+  const handleLinkAndImage = (val) => {
+    setText(val);
+  };
+  const handleHeading = (tag = '') => {
+    const { selectionStart } = document.querySelector('textarea');
 
+    const newHead =
+      selectionStart !== 0
+        ? tag + text.substring(0, selectionStart)
+        : 'Enter text first...';
+    setText(newHead);
+  };
   return (
     <div className=" flex flex-col relative items-center justify-center h-screen w-screen bg-blue-800 ">
       <div className="bg-white fixed top-0 w-full h-[5%] dark: rounded-lg">
         <Navbar />
       </div>
-      <div className="toolbar flex gap-5 md:mt-2 mt-9">
-        <div className="text-white rounded-lg cursor-pointer bg-red-600 px-4 py-2">
-          <button type="button" onClick={() => CheckMarkdown('# ')}>
+      <div className="toolbar flex md:gap-5 gap-1 md:mt-2 mt-9 pt-9 md:flex-row flex-wrap justify-between items-center ">
+        <div className="text-white rounded-lg cursor-pointer bg-red-600 md:px-4 px-2 md:py-2 py-4">
+          <button type="button" onClick={() => handleHeading('# ')}>
             Heading
           </button>
         </div>
-        <div className="text-white rounded-lg cursor-pointer bg-blue-600 px-4 py-2">
+        <div className="text-white rounded-lg cursor-pointer bg-blue-600  md:px-4 px-2 md:py-2 py-4">
           <button type="button" onClick={() => CheckMarkdown('**')}>
             Bold
           </button>
         </div>
-        <div className="text-white rounded-lg cursor-pointer bg-green-600 px-4 py-2">
+        <div className="text-white rounded-lg cursor-pointer bg-green-600 px-4 md:py-2 py-4">
           <button type="button" onClick={() => CheckMarkdown('*')}>
             Italic
           </button>
         </div>
-        <div className="text-white rounded-lg cursor-pointer bg-yellow-600 px-4 py-2">
+        <div className="text-white rounded-lg cursor-pointer bg-yellow-600 px-4 md:py-2 py-4">
           <button
             type="button"
-            onClick={() => CheckMarkdown('[Link](Url here..)')}
+            onClick={() => handleLinkAndImage('[Link](Enter url here..)')}
           >
             Link
           </button>
         </div>
-        <div className="text-white rounded-lg cursor-pointer bg-blue-600 px-4 py-2">
+        <div className="text-white rounded-lg cursor-pointer bg-blue-600 px-4 md:py-2 py-4">
           <button
             type="button"
-            onClick={() => CheckMarkdown('![Alt text](Url here..)')}
+            onClick={() => handleLinkAndImage('![Image](Enter url here..)')}
           >
             Image
           </button>
         </div>
-        <div className="text-white rounded-lg cursor-pointer bg-green-600 px-4 py-2">
+        <div className="text-white rounded-lg cursor-pointer bg-green-600 px-4 md:py-2 py-4">
           <button type="button" onClick={() => CheckMarkdown('\n```\n')}>
             Code Block
           </button>
