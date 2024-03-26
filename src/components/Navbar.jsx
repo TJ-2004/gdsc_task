@@ -6,7 +6,7 @@ const Navbar = () => {
       <div>
         <a
           href="https://gdscsrm.com/"
-          className="text-xl p-4 ml-4 "
+          className="text-xl p-4 ml-4"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -22,7 +22,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            My Twitter
+            Twitter
           </a>
         </div>
         <div>
@@ -32,7 +32,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            My Github
+            Github
           </a>
         </div>
         <div>

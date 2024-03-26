@@ -14,21 +14,69 @@ const App = () => {
     setText(' ');
   };
   const handleCopy = () => {
-    console.log(text);
+    // console.log(text);
     navigator.clipboard.writeText(text);
     setCopytext('Copied');
     setTimeout(() => {
       setCopytext('Copy');
     }, 1000);
   };
+  const CheckMarkdown = (tag = '') => {
+    const { selectionStart } = document.querySelector('textarea');
+    // console.log(selectionStart);
+    const newText =
+      selectionStart !== 0
+        ? tag + text.substring(0, selectionStart) + tag
+        : 'Enter text first...';
+    // console.log(selectionStart);
+
+    setText(newText);
+  };
 
   return (
     <div className=" flex flex-col relative items-center justify-center h-screen w-screen bg-blue-800 ">
-      <div className="bg-white fixed top-0 w-full h-[5%] rounded-lg">
+      <div className="bg-white fixed top-0 w-full h-[5%] dark: rounded-lg">
         <Navbar />
       </div>
-
-      <div className="flex md:flex-row flex-col h-[80%] md:h-2/5 w-[90%] gap-5 justify-center items-center ">
+      <div className="toolbar flex gap-5 md:mt-2 mt-9">
+        <div className="text-white rounded-lg cursor-pointer bg-red-600 px-4 py-2">
+          <button type="button" onClick={() => CheckMarkdown('# ')}>
+            Heading
+          </button>
+        </div>
+        <div className="text-white rounded-lg cursor-pointer bg-blue-600 px-4 py-2">
+          <button type="button" onClick={() => CheckMarkdown('**')}>
+            Bold
+          </button>
+        </div>
+        <div className="text-white rounded-lg cursor-pointer bg-green-600 px-4 py-2">
+          <button type="button" onClick={() => CheckMarkdown('*')}>
+            Italic
+          </button>
+        </div>
+        <div className="text-white rounded-lg cursor-pointer bg-yellow-600 px-4 py-2">
+          <button
+            type="button"
+            onClick={() => CheckMarkdown('[Link](Url here..)')}
+          >
+            Link
+          </button>
+        </div>
+        <div className="text-white rounded-lg cursor-pointer bg-blue-600 px-4 py-2">
+          <button
+            type="button"
+            onClick={() => CheckMarkdown('![Alt text](Url here..)')}
+          >
+            Image
+          </button>
+        </div>
+        <div className="text-white rounded-lg cursor-pointer bg-green-600 px-4 py-2">
+          <button type="button" onClick={() => CheckMarkdown('\n```\n')}>
+            Code Block
+          </button>
+        </div>
+      </div>
+      <div className="flex md:flex-row flex-col h-[80%] md:h-[40%] mt-9 w-[90%] gap-5 justify-center items-center ">
         <div className=" w-full h-full rounded-xl overflow-hidden   md:m-9 ">
           <textarea
             className="w-full h-full  border-none text-xl  resize-none p-4 text-black"
