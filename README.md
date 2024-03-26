@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+<h1 align="center" id="title">QuickMark Preview</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p id="description">MarkDown Previewer is a user-friendly web application designed to assist users in writing and previewing Markdown content in real-time. Leveraging the power of remark-gfm, the application seamlessly converts Markdown text into HTML, providing users with an instant visual representation of their formatted content. Built with React and styled using Tailwind CSS, MarkDown Previewer offers a clean and intuitive interface, making it effortless for users to compose and visualize Markdown documents with syntax highlighting and a real-time preview pane.</p>
 
-## Available Scripts
+<h2>🚀 Live</h2>
+[Live Link](https://quickmark-preview.vercel.app/)
 
-In the project directory, you can run:
+  
+  
+<h2>🧐 Features</h2>
 
-### `npm start`
+Here're some of the project's features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   Real-time Markdown Rendering.
+*   Easy to use interface.
+*   GitHub Flavoured Markdown Support.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>📷 Screenshots:</h2>
 
-### `npm test`
+<img src="./screenshots/desktop.jpg" alt="project-screenshot" width="70%" height="70%">
+<img src="./screenshots/mobile.png" alt="project-screenshot" width="25%" height="25%">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2>🛠️ Installation Steps:</h2>
 
-### `npm run build`
+<p>1. Clone the Repository:</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+git clone https://github.com/lohitkolluri/QuickMark-Preview
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>2. Navigate to the Project Directory:</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+cd QuickMark-Preview
+```
 
-### `npm run eject`
+<p>3. Install Dependencies:</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+yarn
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p>4. Start the Development Server:</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+yarn dev
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  
+  
+<h2>💻 Built with</h2>
 
-## Learn More
+Technologies used in the project:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*   React
+*   React Markdown
+*   Remark-GFM
+*   Tailwind CSS
