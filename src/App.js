@@ -48,6 +48,7 @@ const App = () => {
       <div className="bg-white fixed top-0 w-full h-[5%] dark: rounded-lg">
         <Navbar />
       </div>
+      <div className="prose"></div>
       <div className="toolbar flex md:gap-5 gap-1 md:mt-2 mt-9 pt-9 md:flex-row flex-wrap justify-between items-center ">
         <div className="text-white rounded-lg cursor-pointer bg-red-600 md:px-4 px-2 md:py-2 py-4">
           <button type="button" onClick={() => handleHeading('# ')}>
