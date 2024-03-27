@@ -17,8 +17,10 @@ Here're some of the project's features:
 
 <h2>📷 Screenshots:</h2>
 
-<img src="./screenshots/desktop.jpg" alt="project-screenshot" width="70%" height="70%">
-<img src="./screenshots/mobile.png" alt="project-screenshot" width="25%" height="25%">
+<img src="./Photos/desktopVie.png" alt="project-screenshot" width="70%" height="70%">
+<img src="./Photos/DesktopView.png" alt="project-screenshot" width="70%" height="70%">
+<img src="./Photos/Mobile.jpeg" alt="project-screenshot" width="25%" height="25%">
+
 
 <h2>🛠️ Installation Steps:</h2>
 
