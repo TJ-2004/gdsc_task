@@ -5,12 +5,11 @@ const Navbar = () => {
     <div className="flex justify-between items-center h-full  ">
       <div>
         <a
-          href="https://gdscsrm.com/"
+          href="/"
           className="text-xl p-4 ml-4"
-          target="_blank"
-          rel="noopener noreferrer"
+          
         >
-        GDSC
+        MarkDown
           
         </a>
       </div>
