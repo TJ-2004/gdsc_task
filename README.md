@@ -27,7 +27,7 @@ Here're some of the project's features:
 <p>1. Clone the Repository:</p>
 
 ```
-git clone https://github.com/lohitkolluri/QuickMark-Preview
+git clone https://github.com/TJ-2004/gdsc_task.git
 ```
 
 <p>2. Navigate to the Project Directory:</p>
